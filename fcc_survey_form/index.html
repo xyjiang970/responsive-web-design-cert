@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <!-- Page Title -->
+    <title>Jason's FCC Survey Form</title>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Main Content Area -->
+    <main>
+      <h1 id="title">Jason's FCC Survey Form</h1>
+
+      <p id="description">
+        Thank you for taking the time to help us improve the platform!
+      </p>
+
+      <form id="survey-form">
+
+        <!-- Fieldset 1: Personal Info -->
+        <fieldset>
+          <!-- Name Input -->
+          <label for="name" id="name-label">Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              placeholder="Enter your name" 
+              required
+            />
+
+          <!-- Email input -->
+          <label for="email" id="email-label">Email</label> 
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="Enter your email" 
+              required
+            />
+
+          <!-- Age input -->
+          <label for="age" id="number-label">Age <span class="optional">(optional)</span></label>
+            <input
+              type="number"
+              id="number"
+              name="age"
+              placeholder="Age"
+              min="10"
+              max="99"
+            />
+
+          <!-- Current role dropdown -->
+          <label for="role">Which option best describes your current role?</label>
+            <select id="dropdown" name="role">
+                <option disabled selected value>Select an option</option>
+                <option value="student">Student</option>
+                <option value="full-time">Full Time Employee</option>
+                <option value="part-time">Part Time Employee</option>
+                <option value="not-to-say">Perfer not to say</option>
+                <option value="other">Other</option>
+            </select>
+          
+        </fieldset>
+
+        <!-- Fieldset 2: FreeCodeCamp Questions -->
+        <fieldset>
+          <!-- Recommendation Radio Inputs -->
+          <p>Would you recommend freeCodeCamp to a friend?</p>
+          <label for="definitely">
+            <input
+              type="radio"
+              id="radio"
+              name="user-recommendation"
+              value="definitely"
+            />Definitely
+          </label>
+
+          <label for="maybe">
+            <input
+              type="radio"
+              id="radio"
+              name="user-recommendation"
+              value="maybe"
+            />Maybe
+          </label>
+
+          <label for="not-sure">
+            <input
+              type="radio"
+              id="radio"
+              name="user-recommendation"
+              value="not-sure"
+            />Not Sure
+          </label>
+
+          <!-- Favorite freeCodeCamp Feature -->
+          <label for="role" class="feature">What is your favorite feature of freeCodeCamp?</label>
+            <select id="dropdown" name="feature">
+              <option disabled selected value>Select an option</option>
+              <option value="">Challenges</option>
+              <option value="">Projects</option>
+              <option value="">Community</option>
+              <option value="">Open Source</option>
+            </select>
+
+          <!-- Improvement -->
+          <p class="improved">
+            What would you like to see improved?<span class="optional">(Check all that apply)</span>
+          </p>
+
+          <!-- Front-end Projects -->
+          <label>
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="front-end-projects"
+              value="front-end-projects"
+            />Front-end Projects
+          </label>
+
+          <!-- Back-end Projects -->
+          <label>
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="back-end-projects"
+              value="back-end-projects"
+            />Back-end Projects
+          </label>
+
+          <!-- Data Visualizations -->
+          <label>
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="data-vis"
+              value="data-vis"
+            />Data Visualizations
+          </label>
+
+          <!-- Challenges -->
+          <label>
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="challenges"
+              value="challenges"
+            />Challenges
+          </label>
+
+          <!-- Open Source Community -->
+          <label>
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="open-source"
+              value="open-source"
+            />Open Source Community
+          </label>
+
+          <!-- Videos -->
+          <label>
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="videos"
+              value="videos"
+            />Videos
+          </label>
+
+          <!-- Wiki -->
+          <label>
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="wiki"
+              value="wiki"
+            />Wiki
+          </label>
+
+          <!-- Forum -->
+          <label>
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="forum"
+              value="forum"
+            />Forum
+          </label>
+
+          <!-- Additional Courses -->
+          <label>
+            <input
+              type="checkbox"
+              id="checkbox"
+              name="additional-courses"
+              value="additional-courses"
+            />Additional Courses
+          </label>
+        </fieldset>
+
+        <!-- Fieldset 3: Textarea -->
+        <fieldset>
+          <label for="suggestions">Any comments or suggestions?</label>
+            <textarea
+              id="suggestions"
+              name="suggestions"
+              placeholder="Enter your comment here..."
+            ></textarea>
+      </fieldset>
+
+      <!-- Form Submit Button -->
+      <label for="submit"></label>
+      <input type="submit" id="submit" name="submit" value="Submit"/>
+
+      </form>
+    </main>
+  </body>
+
+  <!-- Footer -->
+  <footer>
+  </footer>
+
+</html>

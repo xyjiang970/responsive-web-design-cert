@@ -1,0 +1,105 @@
+/* Base CSS */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  background-image:
+    linear-gradient(115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  color: white;
+  /* Cover scales the image (while preserving its ratio) to the smallest possible size to fill the container (that is: both its height and width completely cover the container), leaving no empty space. If the proportions of the background differ from the element, the image is cropped either vertically or horizontally. */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Entire Body */
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 1.35rem;
+}
+
+/* H1 and Parapgraphs */
+h1,
+#description {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* Form */
+form {
+  max-width: 60vw;
+  min-width: 60vw;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  padding: 2rem 3rem;
+  background: gray;
+  background: rgba(27, 27, 50, 0.8);
+  border-radius: 1.5rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+#name,
+#email,
+#number,
+#dropdown {
+  width: 100%;
+  height: 5vh;
+  font-size: 1.35rem;
+  margin-bottom: 2rem;
+}
+
+.optional {
+  font-size: 1rem;
+  margin-left: 0.25rem;
+}
+
+fieldset {
+  border: none;
+  border-bottom: 3px solid white;
+  padding-bottom: 3rem;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+#suggestions {
+  font-family: Tahoma;
+  font-size: 1.35rem;
+  width: 100%;
+  height: 15vh;
+
+  /* The resize CSS property sets whether an element is resizable, and if so, in which directions. */
+  resize: vertical;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 5vh;
+  color: white;
+  background-color: green;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#radio,
+#checkbox {
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.feature {
+  padding-top: 3rem;
+}
+.improved {
+  padding-top: 2rem;
+}
