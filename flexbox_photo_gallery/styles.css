@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f5f6f7;
+  }
+  
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    /* Setting gap on a flex container simply adds a specified space between flex items, 
+    very similar to adding a margin to the items themselves. */
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+
+    /* Notice how some of your images have become distorted. 
+    This is because the images have different aspect ratios. 
+    Rather than setting each aspect ratio individually, 
+    you can use the object-fit property to determine how images should behave. */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* The ::after pseudo-element creates an element that is the last child of the selected element. 
+  We can use it to add an empty element after the last image. 
+  If we give it the same width as the images it will push the last image to the left 
+  when the gallery is in a two-column layout. */
+  .gallery::after {
+    content: "";
+    width: 350px;
+  }
+  
