@@ -1,0 +1,71 @@
+.canvas {
+    width: 500px;
+    height: 600px;
+    background-color: #4d0f00;
+
+    /* The CSS overflow property controls what happens to content that is too big to fit into an area. */
+    /* 
+        The overflow property has the following values:
+
+        visible - Default. The overflow is not clipped. The content renders outside the element's box
+        hidden - The overflow is clipped, and the rest of the content will be invisible
+        scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+        auto - Similar to scroll, but it adds scrollbars only when necessary 
+    */
+    overflow: hidden;
+
+    /* The filter CSS property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders. */
+    filter: blur(2px);
+  }
+  
+  .frame {
+    border: 50px solid black;
+    width: 500px;
+    padding: 50px;
+    margin: 20px auto;
+  }
+  
+  .one {
+    width: 425px;
+    height: 150px;
+    background-color: #efb762;
+    margin: 20px auto;
+
+    /* The box-shadow CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radius, and color. */
+
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 0 3px 3px #efb762;
+
+    border-radius: 9px;
+
+    /* The transform CSS property lets you rotate, scale, skew, or translate an element. */
+    /* rotate (-) sign for counter-clockwise */
+    transform: rotate(-0.6deg);
+  }
+  
+  .two {
+    width: 475px;
+    height: 200px;
+    background-color: #8f0401;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 3px 3px #8f0401;
+    border-radius: 8px 10px;
+    transform: rotate(0.4deg);
+  }
+  
+  .one, .two {
+    filter: blur(1px);
+  }
+  
+  .three {
+    width: 91%;
+    height: 28%;
+    background-color: #b20403;
+    margin: auto;
+    filter: blur(2px);
+    box-shadow: 0 0 5px 5px #b20403;
+
+    /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: 30px 25px 60px 12px;
+    transform: rotate(-0.2deg);
+  }
