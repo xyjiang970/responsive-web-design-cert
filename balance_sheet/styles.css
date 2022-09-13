@@ -1,0 +1,200 @@
+/* The span[class~="sr-only"] selector will select any span element whose class includes sr-only. */
+
+/* Rather than having to constantly double-check you are not overwriting your earlier properties, you can use the !important keyword to ensure these properties are always applied, regardless of order or specificity. */
+span[class~="sr-only"] {
+    border: 0 !important;
+
+    /* The CSS clip property is used to define the visible portions of an element. Set the span[class~="sr-only"] selector to have a clip property of rect(1px, 1px, 1px, 1px).
+
+    The clip-path property determines the shape the clip property should take. 
+    
+    Set both the clip-path and -webkit-clip-path properties to the value of inset(50%), forming the clip-path into a rectangle within the element. */
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    clip-path: inset(50%) !important;
+    -webkit-clip-path: inset(50%) !important;
+
+    /* Sizing elements down */
+    width: 1px !important;
+    height: 1px !important;
+
+    /* Preventing text overflow */
+    overflow: hidden !important;
+    white-space: nowrap !important;
+
+    /* Taking these hidden elements out of the document flow. This will ensure that not only are they no longer visible, but they are not even within the page view. */
+    position: absolute !important;
+    padding: 0 !important;
+    margin: -1px !important;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #0a0a23;
+}
+
+h1 {
+    max-width: 37.25rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem;
+}
+
+h1 .flex {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+
+/* The :first-of-type pseudo-selector is used to target the first element that matches the selector. */
+h1 .flex span:first-of-type {
+    font-size: 0.7em;
+}
+
+/* The :last-of-type pseudo-selector does the exact opposite - it targets the last element that matches the selector.  */
+h1 .flex span:last-of-type {
+    font-size: 1.2em;
+}
+
+section {
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 2px solid #d0d0d5;
+}
+
+#years {
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    color: #fff;
+    background: #0a0a23;
+    margin: 0 -2px;
+    /* The calc() function is a CSS function that allows you to calculate a value based on other values. 
+    
+    For example, you can use it to calculate the width of the viewport minus the margin of an element: 
+    
+    .example {
+        margin: 10px;
+        width: calc(100% - 20px);
+    }   
+    */
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+
+    /* Ensure your years do not get hidden by setting a z-index of 999 */
+    z-index: 999;
+}
+
+/* Style the text within your #years element by creating a #years span[class] selector. 
+
+The span[class] syntax will target any span element that has a class attribute set, regardless of the attribute's value. */
+#years span[class] {
+    font-weight: bold;
+    text-align: right;
+    width: 4.5rem;
+}
+
+.table-wrap {
+    padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+/* The :not() pseudo-selector is used to target all elements that do not match the selector - in this case, any of your span elements that do not have the sr-only class. 
+
+This ensures that your earlier rules for the span[class~="sr-only"] selector are not overwritten.
+
+Since we already have !important above - we do not need the :not(.sr-only) selector */
+
+/* span:not(.sr-only) {
+    font-weight: normal;
+} */
+
+/* border-collapse: collapse allows cell borders to collapse into a single border, instead of a border around each cell.  */
+table {
+    border-collapse: collapse;
+    border: 0;
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+}
+
+table caption {
+    color: #356eaf;
+    font-size: 1.3em;
+    font-weight: normal;
+    position: absolute;
+    top: -2.25rem;
+    left: 0.5rem;
+}
+
+tbody td {
+    width: 100vw;
+    min-width: 4rem;
+    max-width: 4rem;
+}
+
+tbody th {
+    /* width of the entire container, less 12rem */
+    width: calc(100% - 12rem);
+}
+
+/* tr[class="total"] selector will target specifically your tr elements with the total class. */
+
+/* The key difference between tr[class="total"] and tr.total is that the first will select tr elements where the only class is total. The second will select tr elements where the class includes total. */
+tr[class="total"] {
+    border-bottom: 4px double #0a0a23;
+    font-weight: bold;
+}
+
+tr[class="total"] th {
+    text-align: left;
+    padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+tr.total td {
+    text-align: right;
+    padding: 0 0.25rem;
+}
+
+/* The :nth-of-type() pseudo-selector is used to target specific elements based on their order among siblings of the same type. */
+tr.total td:nth-of-type(3) {
+    padding: 0.5rem;
+}
+
+tr.total:hover {
+    background: #99c9ff;
+}
+
+/* Can also use td.current */
+td[class="current"] {
+    font-style: italic;
+}
+
+tr.data {
+    background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+tr.data th {
+    text-align: left;
+    padding-top: 0.3rem;
+    padding-left: 0.5rem;
+}
+
+tr.data th .description {
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    padding: 1rem 0 0.75rem;
+    margin-right: -13.5rem;
+}
+
+tr.data td {
+    vertical-align: top;
+    text-align: right;
+    padding: 0.3rem 0.25rem 0;
+}
+
+tr.data td:last-of-type {
+    padding-right: 0.5rem;
+}
